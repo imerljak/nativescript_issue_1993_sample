@@ -12,6 +12,8 @@ export class HomeDetailResolver implements Resolve<number> {
     }
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<number> | Promise<number> | number {
+        console.log("I'll resolve whenever there's a navigation, no matter if its push or pop");
+
         return of(Math.random())
             .pipe(delay(300));
     }
